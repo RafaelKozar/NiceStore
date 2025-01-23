@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NiceStore.Catalogo.Domain
+namespace NiceStore.Catalog.Domain
 {
     public class Category : Entity
     {        

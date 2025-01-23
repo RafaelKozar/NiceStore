@@ -26,7 +26,7 @@ namespace NiceStore.Catalog.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(250)");
 
-            builder.OwnsOne(p => p.Dymensions, dymensions =>
+            builder.OwnsOne(p => p.Dimensions, dymensions =>
             {
                 dymensions.Property(d => d.Height)
                     .HasColumnName("Height")

@@ -35,7 +35,7 @@ namespace NiceStore.Catalog.Data.Repository
 
         public async Task<IEnumerable<Product>> GetByCategory(int code)
         {
-            return await _context.Products.AsNoTracking().Include(p => p.Category).Where(p => p.Category.Code == code).ToListAsync();
+            return await _context.Products.AsNoTracking().Include(p => p.Categories).Where(p => p.Categories.Code == code).ToListAsync();
         }
 
         public async Task<Product> GetById(Guid id)

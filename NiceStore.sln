@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiceStore.Catalog.Domain", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NiceStore.Catalog.Data", "src\NiceStore.Catalog.Data\NiceStore.Catalog.Data.csproj", "{DEC63B44-07C2-4CEF-8AB7-BD85C89C90CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NiceStore.Catalog.Application", "src\NiceStore.Catalog.Application\NiceStore.Catalog.Application.csproj", "{43FB170A-AE02-4F9D-86A0-19F3453B553C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{DEC63B44-07C2-4CEF-8AB7-BD85C89C90CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEC63B44-07C2-4CEF-8AB7-BD85C89C90CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEC63B44-07C2-4CEF-8AB7-BD85C89C90CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43FB170A-AE02-4F9D-86A0-19F3453B553C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43FB170A-AE02-4F9D-86A0-19F3453B553C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43FB170A-AE02-4F9D-86A0-19F3453B553C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43FB170A-AE02-4F9D-86A0-19F3453B553C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{E83877CA-73B0-4A2D-A530-D3A3528D2D4C} = {5AFD9652-D861-483B-AD9A-5F301B4F8C2D}
 		{5A81EEDD-B500-4A38-8134-4F520BB9C0D2} = {EA8884F2-2987-4C0D-AB99-BD8BFE7EAA61}
 		{DEC63B44-07C2-4CEF-8AB7-BD85C89C90CF} = {EA8884F2-2987-4C0D-AB99-BD8BFE7EAA61}
+		{43FB170A-AE02-4F9D-86A0-19F3453B553C} = {EA8884F2-2987-4C0D-AB99-BD8BFE7EAA61}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {154DB659-F8CD-42C1-9338-8F50F362D7FC}

@@ -13,25 +13,26 @@ namespace NiceStore.Catalog.Domain
         public string Description { get; private set; }
         public bool Active { get; private set; }
         public decimal Price { get; private set; }
-        public DateTime RegisterDate { get; private set; }
+        public DateTime CreatedAt { get; private set; }
         public string Image { get; private set; }
         public int StockQuantity { get; private set; }
         public Guid CategoryId { get; private set; }
-        public Dymensions Dymensions { get; private set; }
-        public Category Category { get; private set; }
+        public Dimensions Dimensions { get; private set; }
+        
+        public IEnumerable<Category> Categories { get; private set; }
 
-        public Product(string name, string description, bool active, decimal price, Guid categoryId, DateTime registerDate, string image, Dymensions dymensions)
+        public Product(string name, string description, bool active, decimal price, Guid categoryId, DateTime registerDate, string image, Dimensions dymensions)
         {
             Name = name;
             Description = description;
             Active = active;
             Price = price;
-            RegisterDate = registerDate;
+            CreatedAt = registerDate;
             Image = image;
             CategoryId = categoryId;
 
             Validate();
-            Dymensions = dymensions;
+            Dimensions = dymensions;
         }
 
         public void Activate() => Active = true;
@@ -40,7 +41,7 @@ namespace NiceStore.Catalog.Domain
 
         public void ChangeCategory(Category category)
         {
-            Category = category;
+            Categories = category;
             CategoryId = category.Id;
         }
 

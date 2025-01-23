@@ -20,8 +20,4 @@
     <ProjectReference Include="..\NiceStore.Core\NiceStore.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Mappings\" />
-  </ItemGroup>
-
 </Project>

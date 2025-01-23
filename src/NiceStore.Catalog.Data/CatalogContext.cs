@@ -22,7 +22,8 @@ namespace NiceStore.Catalog.Data
             foreach (var property in 
                 modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetProperties().Where(p => p.ClrType == typeof(string))))
                 property.SetColumnType("varchar(100)");
-            base.OnModelCreating(modelBuilder);
+            
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(CatalogContext).Assembly);  
         }
 
         public Task<bool> Commit()

@@ -17,17 +17,21 @@ namespace NiceStore.Catalogo.Domain
         public string Image { get; private set; }
         public int StockQuantity { get; private set; }
         public Guid CategoryId { get; private set; }
+        public Dymensions Dymensions { get; private set; }
         public Category Category { get; private set; }
 
-        public Product(string name, string description, bool active, decimal price, Guid categoryId, DateTime registerDate, string image)
+        public Product(string name, string description, bool active, decimal price, Guid categoryId, DateTime registerDate, string image, Dymensions dymensions)
         {
             Name = name;
             Description = description;
             Active = active;
             Price = price;
             RegisterDate = registerDate;
-            Image = image;            
+            Image = image;
             CategoryId = categoryId;
+
+            Validate();
+            Dymensions = dymensions;
         }
 
         public void Activate() => Active = true;
@@ -38,6 +42,37 @@ namespace NiceStore.Catalogo.Domain
         {
             Category = category;
             CategoryId = category.Id;
+        }
+
+        public void ChangeDescription(string description)
+        {
+            Description = description;
+        }   
+
+        public void SubtractStock(int quantity)
+        {
+            if (quantity < 0)
+                quantity *= -1;
+
+            if (!HasStock(quantity))
+                throw new DomainException("Insufficient stock");
+
+            StockQuantity -= quantity;
+        }   
+
+        public void AddStock(int quantity)
+        {
+            StockQuantity += quantity;
+        }
+
+        public bool HasStock(int quantity)
+        {
+            return StockQuantity >= quantity;
+        }   
+
+        public void Validate()
+        {
+            AssertionConcern.ValidateIfNull(Name, "The product name cannot be null");            
         }
 
     }

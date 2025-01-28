@@ -19,7 +19,7 @@ namespace NiceStore.Catalog.Data.Mappings
                 .HasColumnType("varchar(250)");
 
             builder.HasMany(c => c.Products)
-                .WithOne(p => p.Categories)
+                .WithOne(p => p.Category)
                 .HasForeignKey(p => p.CategoryId);
 
             builder.ToTable("Categories");  

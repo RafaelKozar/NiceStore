@@ -19,7 +19,7 @@ namespace NiceStore.Catalog.Domain
         public Guid CategoryId { get; private set; }
         public Dimensions Dimensions { get; private set; }
         
-        public IEnumerable<Category> Categories { get; private set; }
+        public Category Category { get; private set; }
 
         public Product(string name, string description, bool active, decimal price, Guid categoryId, DateTime registerDate, string image, Dimensions dymensions)
         {
@@ -35,13 +35,15 @@ namespace NiceStore.Catalog.Domain
             Dimensions = dymensions;
         }
 
+        protected Product() { }
+
         public void Activate() => Active = true;
 
         public void Deactivate() => Active = false;
 
         public void ChangeCategory(Category category)
         {
-            Categories = category;
+            Category = category;
             CategoryId = category.Id;
         }
 

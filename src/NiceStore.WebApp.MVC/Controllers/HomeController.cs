@@ -4,8 +4,7 @@ using NiceStore.WebApp.MVC.Models;
 using System.Diagnostics;
 
 namespace NiceStore.WebApp.MVC.Controllers
-{
-    [Authorize]
+{    
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

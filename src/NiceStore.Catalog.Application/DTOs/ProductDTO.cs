@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,7 +50,8 @@ namespace NiceStore.Catalog.Application.DTOs
         [Required(ErrorMessage = "The field {0} is required")]
         public int Depth { get; set; }
 
-       public IEnumerable<CategoryDTO> Categories { get; set; }
+        
+        public IEnumerable<CategoryDTO>? Categories { get; set; }
 
 
 

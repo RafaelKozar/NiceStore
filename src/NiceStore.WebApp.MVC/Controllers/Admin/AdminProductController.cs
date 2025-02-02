@@ -83,7 +83,7 @@ namespace NiceStore.WebApp.MVC.Controllers.Admin
         private async Task<ProductDTO> PopulateCategories(ProductDTO productDTO)
         {
             var categories = await _productAppService.GetAllCategories();
-            productDTO.Categories = categories;
+            productDTO.Categories = categories ?? new List<CategoryDTO>(); // Ensure categories is not null
             return productDTO;
         }
 

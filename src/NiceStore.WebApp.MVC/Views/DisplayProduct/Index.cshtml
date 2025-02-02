@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<NiceStore.Catalog.Application.DTOs.ProductDTO>
 
 @{
-    ViewData["Title"] = "Vitrine";
+    ViewData["Title"] = "Display";
 }
 <style>
     h4 {
@@ -62,31 +62,27 @@
 </style>
 <div class="container">
 
-    <h1>Manage Products</h1>
-    <hr />
-    <div class="row">
-        <a asp-controller="AdminProduct" asp-action="NewProduct" class="btn btn-success right">+ New Product</a>
-    </div>
-    <hr />
+    <h1>Display of products</h1>
+    <br />
     <div class="row">
         <!-- BEGIN PRODUCTS -->
         @{
-            foreach (var product in Model.OrderBy(p => p.CategoryId))
+            foreach (var product in Model.OrderBy(p=>p.CategoryId))
             {
-                <div class="col-md-3 col-sm-6">
-                    <span class="thumbnail">
-                        <img width="200" height="200" src="~/Images/@product.Image" />
-                        <h4>@product.Name</h4>
-                        <p>@product.StockQuantity stock</p>
-                        <p>@product.Description</p>
-                        <p class="price">@product.Price.ToString("C")</p>
-                        <hr class="line">
-                        <div class="row">
-                            <a asp-controller="AdminProduct" asp-action="UpdateProduct" asp-route-id="@product.Id" class="btn btn-success right">Edit</a> &nbsp;
-                            <a asp-controller="AdminProduct" asp-action="UpdateStock" asp-route-id="@product.Id" class="btn btn-info right">Stock</a>
+            <div class="col-md-3 col-sm-6">
+                <span class="thumbnail">
+                        <a asp-controller="DisplayProduct" asp-action="ProductDetails" asp-route-id="@product.Id"><img width="200" height="200" src="~/Images/@product.Image" /></a>
+                    <h4>@product.Name</h4>
+                    <p>Only @product.StockQuantity in stock!</p>
+                    <p>@product.Description</p>
+                    <hr class="line">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <p class="price">@product.Price.ToString("C")</p>
                         </div>
-                    </span>
-                </div>
+                    </div>
+                </span>
+            </div>
             }
         }
 

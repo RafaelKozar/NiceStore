@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiceStore.Catalog.Applicati
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiceStore.WebApp.MVC", "src\NiceStore.WebApp.MVC\NiceStore.WebApp.MVC.csproj", "{BDB8B2A1-CD50-4ABE-8D98-DB5E37FDF3B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NiceStore.Payments.Domain", "src\NiceStore.Payments.Domain\NiceStore.Payments.Domain.csproj", "{D353B83A-D34C-4A30-B76D-10134A36CA91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{BDB8B2A1-CD50-4ABE-8D98-DB5E37FDF3B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDB8B2A1-CD50-4ABE-8D98-DB5E37FDF3B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDB8B2A1-CD50-4ABE-8D98-DB5E37FDF3B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D353B83A-D34C-4A30-B76D-10134A36CA91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D353B83A-D34C-4A30-B76D-10134A36CA91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D353B83A-D34C-4A30-B76D-10134A36CA91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D353B83A-D34C-4A30-B76D-10134A36CA91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +77,7 @@ Global
 		{DEC63B44-07C2-4CEF-8AB7-BD85C89C90CF} = {EA8884F2-2987-4C0D-AB99-BD8BFE7EAA61}
 		{43FB170A-AE02-4F9D-86A0-19F3453B553C} = {EA8884F2-2987-4C0D-AB99-BD8BFE7EAA61}
 		{BDB8B2A1-CD50-4ABE-8D98-DB5E37FDF3B0} = {D8F9D081-8283-4174-9635-E5C7881C0F77}
+		{D353B83A-D34C-4A30-B76D-10134A36CA91} = {4BA1377B-1CFA-4D53-83B0-FC0981F3FF3D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {154DB659-F8CD-42C1-9338-8F50F362D7FC}

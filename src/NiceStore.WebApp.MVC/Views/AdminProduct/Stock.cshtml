@@ -18,7 +18,7 @@
             <p>@Model.Description</p>
 
             <div class="section" style="padding-bottom:20px;">
-                <form method="post" asp-controller="AdminProducts" asp-action="UpdateStock">
+                <form method="post" asp-controller="AdminProduct" asp-action="UpdateStock">
                     <input type="hidden" id="Id" name="Id" value="@Model.Id" />
                     <input type="text" id="quantity" name="quantity" />
                     <button class="btn btn-info">Update Stock</button>

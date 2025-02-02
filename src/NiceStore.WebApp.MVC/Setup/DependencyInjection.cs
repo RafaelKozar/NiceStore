@@ -1,7 +1,9 @@
-﻿using NiceStore.Catalog.Application.Services;
+﻿using MediatR;
+using NiceStore.Catalog.Application.Services;
 using NiceStore.Catalog.Data;
 using NiceStore.Catalog.Data.Repository;
 using NiceStore.Catalog.Domain;
+using NiceStore.Catalog.Domain.Events;
 using NiceStore.Core.Bus;
 
 namespace NiceStore.WebApp.MVC.Setup
@@ -17,6 +19,8 @@ namespace NiceStore.WebApp.MVC.Setup
             services.AddScoped<IProductAppService, ProductAppService>();
             services.AddScoped<IStockService, StockService>();
             services.AddScoped<CatalogContext>();
+
+            services.AddScoped<INotificationHandler<ProductBellowStockEvent>, ProductEventHandler>();
 
 
         }

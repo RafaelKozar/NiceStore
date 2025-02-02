@@ -11,7 +11,8 @@ namespace NiceStore.Catalog.Application.AutoMapper
                 CreateMap<DTOs.ProductDTO, Domain.Product>()
                     .ConstructUsing(p =>
                                            new Domain.Product(p.Name, p.Description, p.Active, p.Price, p.CategoryId, p.CreatedAt, p.Image,   new Domain.Dimensions(p.Height, p.Width, p.Depth)));
-                CreateMap<DTOs.CategoryDTO, Domain.Category>();
+                CreateMap<DTOs.CategoryDTO, Domain.Category>()
+                   .ConstructUsing(c => new Domain.Category(c.Name, c.Code));
             }
         }   
     }

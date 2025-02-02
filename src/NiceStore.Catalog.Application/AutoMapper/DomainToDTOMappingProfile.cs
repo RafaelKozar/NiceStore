@@ -14,8 +14,8 @@ namespace NiceStore.Catalog.Application.AutoMapper
             CreateMap<Domain.Product, DTOs.ProductDTO>()
                 .ForMember(d => d.Width, o => o.MapFrom(s => s.Dimensions.Width))
                 .ForMember(d => d.Height, o => o.MapFrom(s => s.Dimensions.Height))
-                .ForMember(d => d.Depth, o => o.MapFrom(s => s.Dimensions.Depth))
-                .ForMember(d => d.Categories, o => o.MapFrom(s => s.Category));
+                .ForMember(d => d.Depth, o => o.MapFrom(s => s.Dimensions.Depth));
+                
             CreateMap<Domain.Category, DTOs.CategoryDTO>();
         }
     }

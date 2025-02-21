@@ -8,5 +8,7 @@ namespace NiceStore.Payments.Domain
 {
     public enum TypeDescountVoucher
     {
+        Percentage = 0,
+        Value = 1
     }
 }

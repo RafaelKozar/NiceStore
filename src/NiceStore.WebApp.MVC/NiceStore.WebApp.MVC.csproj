@@ -25,6 +25,7 @@
     <ProjectReference Include="..\NiceStore.Catalog.Data\NiceStore.Catalog.Data.csproj" />
     <ProjectReference Include="..\NiceStore.Catalogo.Domain\NiceStore.Catalog.Domain.csproj" />
     <ProjectReference Include="..\NiceStore.Core\NiceStore.Core.csproj" />
+    <ProjectReference Include="..\NiceStore.Payments.Application\NiceStore.Payments.Application.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,6 +5,7 @@ using NiceStore.Catalog.Data.Repository;
 using NiceStore.Catalog.Domain;
 using NiceStore.Catalog.Domain.Events;
 using NiceStore.Core.Bus;
+using NiceStore.Payments.Application.Commands;
 
 namespace NiceStore.WebApp.MVC.Setup
 {
@@ -21,6 +22,9 @@ namespace NiceStore.WebApp.MVC.Setup
             services.AddScoped<CatalogContext>();
 
             services.AddScoped<INotificationHandler<ProductBellowStockEvent>, ProductEventHandler>();
+
+            // add services payment
+            services.AddScoped<IRequestHandler<AddItemOrderCommand, bool>, OrderCommandHandler>();  
 
 
         }

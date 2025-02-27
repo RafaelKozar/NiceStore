@@ -11,16 +11,16 @@ namespace NiceStore.Payments.Application.Commands
 {
     public class AddItemOrderCommand : Command
     {
-        public Guid CustomerId { get; private set; }
-        public Guid OrderId { get; private set; }     
+        public Guid ClientId { get; private set; }
+        public Guid ProductId { get; private set; }     
         public string ProductName { get; private set; }
         public int Quantity { get; private set; }
         public decimal ValueUnity { get; private set; }
 
-        public AddItemOrderCommand(Guid customerId, Guid orderId,  string productName, int quantity, decimal value)
+        public AddItemOrderCommand(Guid clientId, Guid orderId,  string productName, int quantity, decimal value)
         {
-            CustomerId = customerId;
-            OrderId = orderId;         
+            ClientId = clientId;
+            ProductId = orderId;         
             ProductName = productName;
             Quantity = quantity;
             ValueUnity = value;
@@ -37,11 +37,11 @@ namespace NiceStore.Payments.Application.Commands
     {
         public AddItemOrderValidation()
         {            
-            RuleFor(c => c.CustomerId)
+            RuleFor(c => c.ClientId)
                 .NotEqual(Guid.Empty)
                 .WithMessage("Invalid client ID");
 
-            RuleFor(c => c.OrderId)
+            RuleFor(c => c.ProductId)
                 .NotEqual(Guid.Empty)
                 .WithMessage("Invalid order ID");
 

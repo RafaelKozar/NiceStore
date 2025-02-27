@@ -19,7 +19,12 @@ namespace NiceStore.Core.Bus
 
         public async Task PublishEvent<T>(T eventt) where T : Event
         {
-            await _mediator.Publish(eventt);
+            await _mediator.Publish(eventt);            
+        }
+
+        public async Task<bool> SendCommand<T>(T command) where T : Command
+        {
+            return await _mediator.Send(command);  
         }
     }
 }

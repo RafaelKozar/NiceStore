@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NiceStore.Core\NiceStore.Core.csproj" />
+    <ProjectReference Include="..\NiceStore.Payments.Domain\NiceStore.Payments.Domain.csproj" />
   </ItemGroup>
 
 </Project>
